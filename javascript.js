@@ -64,19 +64,16 @@ function playRound(playerPlay, computerPlay) {                                  
         && (computerPlay === 'PAPER')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'SCISSORS'))) {     // to determine whether or not condition has been met (pP === cP), triggering the           
         return ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);                                     // return statement  
 
-        }   else if ((playerPlay === 'ROCK') && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER') 
+        }   else if ((playerPlay === 'ROCK') && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER')                 //  grouped all losing situations to trigger lose string
                 && (computerPlay === 'SCISSORS')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'ROCK'))) {
                     return ("You lose " +computerPlay+ " beats " +playerPlay);
 
-                }   else if ((playerPlay === 'ROCK') && (computerPlay === 'SCISSORS') || ((playerPlay === 'SCISSORS') 
+                }   else if ((playerPlay === 'ROCK') && (computerPlay === 'SCISSORS') || ((playerPlay === 'SCISSORS')   //  grouped all winning situations to trigger win string
                         && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER') && (computerPlay === 'ROCK')))); {
                             return ("You Win! " +playerPlay+ " beats " +computerPlay);
-                        }   
                             
-
-               
-        }                                                                                       // GOT IT!  // Now just have to enter all other conditionals      
-
+                        }   
+}                                                                                               // GOT IT!  // Now just have to account for empty strings and null/undefined      
 
 
 
