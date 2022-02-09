@@ -62,13 +62,21 @@ function playRound(playerPlay, computerPlay) {                                  
        
     if (((playerPlay === 'ROCK') && (computerPlay === 'ROCK')) || ((playerPlay === 'PAPER')                     // checks for ties: compares user/comp functions with all possible results
         && (computerPlay === 'PAPER')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'SCISSORS'))) {     // to determine whether or not condition has been met (pP === cP), triggering the           
-        return ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);                                     // return statement   
-                                                                                                                            
+        return ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);                                     // return statement  
 
+        }   else if ((playerPlay === 'ROCK') && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER') 
+                && (computerPlay === 'SCISSORS')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'ROCK'))) {
+                    return ("You lose " +computerPlay+ " beats " +playerPlay);
 
+                }   else if ((playerPlay === 'ROCK') && (computerPlay === 'SCISSORS') || ((playerPlay === 'SCISSORS') 
+                        && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER') && (computerPlay === 'ROCK')))); {
+                            return ("You Win! " +playerPlay+ " beats " +computerPlay);
+                        }   
+                            
 
-    }                                                                                                            // GOT IT!  // Now just have to enter all other conditionals      
-}
+               
+        }                                                                                       // GOT IT!  // Now just have to enter all other conditionals      
+
 
 
 
