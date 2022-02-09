@@ -29,12 +29,14 @@ console.log("Hello World!")
    function computerPlay() {
         let randNumber = Math.floor(Math.random() * (2 - 0 + 1) + 0);             // picks a random number between 0 and 2 (inclusive) - (max - min + 1) + min
         let compChoice = ['Rock', 'Paper', 'Scissors'];                                 // creates array that includes our three choices  
-        return compChoice[randNumber];                            // assigns new value to 'compChoice' using the 'randNumber' function we defined above 
-        };                                                          //^^ returns the random selection from the array
+        let compSelection = compChoice[randNumber];                                // creates 'compSelection' using the 'randNumber' function we defined above 
+        let computerSelection = compSelection.toUpperCase();                       // converts compSelection to Uppercase for easier comparison to user input
+        return computerSelection;                                                  //^^ returns the random, capitalized selection from the array 
+        };                                                                            
 
- console.log(computerPlay());                                                    // prints the function 'computerPlay()' in console
+ console.log(computerPlay());              // prints the function 'computerPlay()' in console
 
-// alert(computerPlay());                                                        // prints the function 'computerPlay()' in browser prompt
+// alert(computerPlay());                  // prints the function 'computerPlay()' in browser prompt
 
 //
 //
@@ -42,8 +44,24 @@ console.log("Hello World!")
 //
 //
 //
-//
-//
+// creating 'playRound' function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 //
 //
