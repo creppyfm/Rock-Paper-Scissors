@@ -34,20 +34,39 @@ console.log("Hello World!")
         return computerSelection;                                                  //^^ returns the random, capitalized selection from the array 
         };                                                                            
 
- console.log(computerPlay());              // prints the function 'computerPlay()' in console
 
-// alert(computerPlay());                  // prints the function 'computerPlay()' in browser prompt
+
+
+    // alert(computerSelection());                                                        // prints the function 'computerPlay()' in browser prompt
 
 //
 //
 //
 //
 //
-//
+// creating playerPlay function
+
+    function playerPlay() {
+        let choice = prompt("What's your move?");                             // create 'choice' var to accept user input
+        let playerSelection = choice.toUpperCase();                           // copy capitalized 'choice' to playerSelection for easier comparison to cpu input 
+        return playerSelection;                                               // returns capitalized player input
+    }
+
+
+
+
 // creating 'playRound' function
 
+    function playRound(playerSelection, computerSelection) {
+        computerSelection = computerPlay;
+        playerSelection = playerPlay;
 
+        if (playerSelection() && computerSelection() === 'ROCK' || 'PAPER' || 'SCISSORS') {
+            return ("It's a tie! " +playerSelection()+ " is equal to " +computerSelection());
+        }
+    }
 
+    console.log(playRound())
 
 
 
