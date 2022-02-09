@@ -27,11 +27,12 @@ console.log("Hello World!")
 // creating computer's play
 
    function computerPlay() {
-        let randNumber = Math.floor(Math.random() * (2 - 0 + 1) + 0);             // picks a random number between 0 and 2 (inclusive) - (max - min + 1) + min
         let compChoice = ['Rock', 'Paper', 'Scissors'];                                 // creates array that includes our three choices  
+        let randNumber = Math.floor(Math.random() * (2 - 0 + 1) + 0);             // picks a random number between 0 and 2 (inclusive) - (max - min + 1) + min
         let compSelection = compChoice[randNumber];                                // creates 'compSelection' using the 'randNumber' function we defined above 
         let computerSelection = compSelection.toUpperCase();                       // converts compSelection to Uppercase for easier comparison to user input
         return computerSelection;                                                  //^^ returns the random, capitalized selection from the array 
+
         };                                                                            
 
 
@@ -57,19 +58,29 @@ console.log("Hello World!")
 
 // creating 'playRound' function
 
-    function playRound(playerSelection, computerSelection) {
-        computerSelection = computerPlay;
-        playerSelection = playerPlay;
-
-        if (playerSelection() && computerSelection() === 'ROCK' || 'PAPER' || 'SCISSORS') {
-            return ("It's a tie! " +playerSelection()+ " is equal to " +computerSelection());
-        }
-    }
-
-    console.log(playRound())
+function playRound(playerPlay, computerPlay) {                                                                    // create 'playRound' function
+       
+    if (((playerPlay === 'ROCK') && (computerPlay === 'ROCK')) || ((playerPlay === 'PAPER')                     // checks for ties: compares user/comp functions with all possible results
+        && (computerPlay === 'PAPER')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'SCISSORS'))) {     // to determine whether or not condition has been met (pP === cP), triggering the           
+        return ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);                                     // return statement   
+                                                                                                                            
 
 
 
+    }                                                                                                            // GOT IT!  // Now just have to enter all other conditionals      
+}
+
+
+
+let computerSelection = computerPlay();                   // removed from function
+let playerSelection = playerPlay();                       // ^^^
+
+
+
+console.log(playerSelection + computerSelection);
+
+
+console.log(playRound(playerSelection,computerSelection));
 
 
 
@@ -80,9 +91,102 @@ console.log("Hello World!")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   WHAT IFS BELOW
+//
+//
+//
+//
+//
+//// What if...
+
+    // function playRound(playerSelection, computerSelection) {
+       
+    //     if ((playerPlay() === computerPlay()) === true) {                                           // WHY ISN'T THE COMPUTER COMPARING THE TWO PROPERTIES? - NEED TO CHANGE FROM === TO 
+    //         return ("It's a tie! " +playerPlay()+ " is equal to " +computerPlay());
+
+    //     }   
+        
+        //  let computerSelection = computerPlay();                   // removed from function
+        //  let playerSelection = playerPlay();                       // ^^^
+
+
+    // }
+
+    // // console.log(playerPlay()+computerPlay());
+
+
+
+
+
+
+
+
+
+
+// console.log(playerPlay()+computerPlay());
 
 //
 //
+//
+//
+//
+// 
+//
+//
+    // function playRound(playerSelection, computerSelection) {
+       
+    //     if ((playerPlay() === computerPlay()) === true) {                                           // WHY ISN'T THE COMPUTER COMPARING THE TWO PROPERTIES? - NEED TO CHANGE FROM === TO 
+    //         return ("It's a tie! " +playerPlay()+ " is equal to " +computerPlay());
+
+    //     }   
+        
+    //     // let computerSelection = computerPlay();                   // removed from function
+    //     // let playerSelection = playerPlay();                       // ^^^
+
+
+    // }
+
+    
+    
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// 
 //
 //
 //
