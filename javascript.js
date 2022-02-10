@@ -73,7 +73,7 @@ function playRound(playerPlay, computerPlay) {                                  
                             return ("You Win! " +playerPlay+ " beats " +computerPlay);
                             
                         }   else  {
-                            
+                                return ("Please enter a valid choice.")
                         }
 }                                                                                               // GOT IT!  // Now just have to account for empty strings and null/undefined      
 
