@@ -69,23 +69,25 @@ function playRound(playerPlay, computerPlay) {                                  
                     return ("You lose " +computerPlay+ " beats " +playerPlay);
 
                 }   else if ((playerPlay === 'ROCK') && (computerPlay === 'SCISSORS') || ((playerPlay === 'SCISSORS')   //  grouped all winning situations to trigger win string
-                        && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER') && (computerPlay === 'ROCK')))); {
+                        && (computerPlay === 'PAPER')) || ((playerPlay === 'PAPER') && (computerPlay === 'ROCK'))) {
                             return ("You Win! " +playerPlay+ " beats " +computerPlay);
                             
-                        }   
+                        }   else  {
+                            
+                        }
 }                                                                                               // GOT IT!  // Now just have to account for empty strings and null/undefined      
 
 
 
-let computerSelection = computerPlay();                   // removed from function
-let playerSelection = playerPlay();                       // ^^^
+let computerSelection = computerPlay();                   
+let playerSelection = playerPlay();                       
 
 
 
-console.log(playerSelection + computerSelection);
+console.log(playerSelection + computerSelection);                                               // TESTING
 
 
-console.log(playRound(playerSelection,computerSelection));
+console.log(playRound(playerSelection,computerSelection));                                      // TESTING        
 
 
 
