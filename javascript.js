@@ -58,23 +58,33 @@ console.log("Hello World!")
 
 // creating 'playRound' function
 
+
+let compScore = 0;
+let playScore = 0;
+
+
 function playRound(playerPlay, computerPlay) {                                                                    // create 'playRound' function
 
     let pWin = ("You Win! " +playerPlay+ " beats " +computerPlay);
     let cWin = ("You lose " +computerPlay+ " beats " +playerPlay);
     let tie = ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);
     let invalid = ("Please enter a valid choice.");
+
+
+
        
     if (((playerPlay === 'ROCK') && (computerPlay === 'ROCK')) || ((playerPlay === 'PAPER')                     // checks for ties: compares user/comp functions with all possible results
-        && (computerPlay === 'PAPER')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'SCISSORS'))) {     // to determine whether or not condition has been met (pP === cP), triggering the           
+        && (computerPlay === 'PAPER')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'SCISSORS'))) {     // to determine whether or not condition has been met (pP === cP), triggering the               
         return (tie);                                                                                           // return statement  
 
         }   else if ((playerPlay === 'ROCK') && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER')                 //  grouped all losing situations to trigger lose string
                 && (computerPlay === 'SCISSORS')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'ROCK'))) {
-                    return (cWin);
+                compScore = ++compScore;                                                                                // adds 1 each time condition is met, starting from 0
+                    return (cWin);                                                                                      // added score variables
 
                 }   else if ((playerPlay === 'ROCK') && (computerPlay === 'SCISSORS') || ((playerPlay === 'SCISSORS')   //  grouped all winning situations to trigger win string
                         && (computerPlay === 'PAPER')) || ((playerPlay === 'PAPER') && (computerPlay === 'ROCK'))) {
+                            playScore = ++playScore;                                                                    // adds 1 each time condition is met, starting from 0
                             return (pWin);
                             
                         }   else  {
@@ -85,24 +95,20 @@ function playRound(playerPlay, computerPlay) {                                  
 
 
 
-let computerSelection = computerPlay;                   
-let playerSelection = playerPlay;                       
-
-
-
-
-
-
-
-
-
-
 // creating the 'game' function
 
 
 function game() {
-    for (let i = 0; i < 5; i++)
-        playRound(playerSelection(), computerSelection());
+    for (let i = 0; i < 5; i++) {                                                                                           // loops input 5 times
+        console.log(playRound(playerPlay(), computerPlay()));
+    }
+    
+    let winner = (playScore > compScore) || (playScore < compScore) || (playScore === compScore) ? console.log("You have beaten the Computer! Congratulations!")                     // declares winner
+        : console.log("The Computer has beaten you. Practice is in order.") 
+    console.log(winner);
+    console.log(playScore, compScore)
+        
+        
 
 }
 
