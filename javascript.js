@@ -59,35 +59,84 @@ console.log("Hello World!")
 // creating 'playRound' function
 
 function playRound(playerPlay, computerPlay) {                                                                    // create 'playRound' function
+
+    let pWin = ("You Win! " +playerPlay+ " beats " +computerPlay);
+    let cWin = ("You lose " +computerPlay+ " beats " +playerPlay);
+    let tie = ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);
+    let invalid = ("Please enter a valid choice.");
        
     if (((playerPlay === 'ROCK') && (computerPlay === 'ROCK')) || ((playerPlay === 'PAPER')                     // checks for ties: compares user/comp functions with all possible results
         && (computerPlay === 'PAPER')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'SCISSORS'))) {     // to determine whether or not condition has been met (pP === cP), triggering the           
-        return ("It's a tie! " +playerPlay+ " is equal to " +computerPlay);                                     // return statement  
+        return (tie);                                                                                           // return statement  
 
         }   else if ((playerPlay === 'ROCK') && (computerPlay === 'PAPER') || ((playerPlay === 'PAPER')                 //  grouped all losing situations to trigger lose string
                 && (computerPlay === 'SCISSORS')) || ((playerPlay === 'SCISSORS') && (computerPlay === 'ROCK'))) {
-                    return ("You lose " +computerPlay+ " beats " +playerPlay);
+                    return (cWin);
 
                 }   else if ((playerPlay === 'ROCK') && (computerPlay === 'SCISSORS') || ((playerPlay === 'SCISSORS')   //  grouped all winning situations to trigger win string
                         && (computerPlay === 'PAPER')) || ((playerPlay === 'PAPER') && (computerPlay === 'ROCK'))) {
-                            return ("You Win! " +playerPlay+ " beats " +computerPlay);
+                            return (pWin);
                             
                         }   else  {
-                                return ("Please enter a valid choice.")
+                                return (invalid)
                         }
 }                                                                                               // GOT IT!  // Now just have to account for empty strings and null/undefined      
 
 
 
-let computerSelection = computerPlay();                   
-let playerSelection = playerPlay();                       
+
+let computerSelection = computerPlay;                   
+let playerSelection = playerPlay;                       
 
 
 
-console.log(playerSelection + computerSelection);                                               // TESTING
 
 
-console.log(playRound(playerSelection,computerSelection));                                      // TESTING        
+
+
+
+
+
+// creating the 'game' function
+
+
+function game() {
+    for (let i = 0; i < 5; i++)
+        playRound(playerSelection(), computerSelection());
+
+}
+
+
+
+
+
+
+
+console.log(game())
+
+
+
+// console.log(playRound(playerSelection(),computerSelection()));                                      // TESTING        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(playerSelection() + computerSelection());                                               // TESTING
+
+
 
 
 
