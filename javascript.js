@@ -1,19 +1,3 @@
-// Planning / Pseudocode
-// 
-// What's the problem? 
-//    Need to create a game that ACCEPTS USER INPUT OF ONE OF THREE OPTIONS, EACH OPTION ACCEPTED IN ALL CAPS, LOWERCASE, OR A MIXTURE OF BOTH, 
-//    COMPARES THE VALUE OF THE USERS INPUT WITH A RANDOMLY GENERATED COMPUTER VALUE, DETERMINES WHETHER THE USER OR THE COMPUTER HAVE THE 
-//    HIGHER VALUE (WIN,) OR IF THEIR VALUES ARE EQUAL (TIE). The gamme must also PRINT RELEVANT STRINGS TO ANNOUNCE WINNER/LOSER/TIE.
-//    
-//  Pseudocode        
-//
-//
-// let response;
-
-
-//    function beginGame(let response = prompt("Do you want to play?")) {
-
-//    };
 //-----------------------------------------------------------------------------------------------------------------//
 // Rock, Paper, Scissors
 //-----------------------------------------------------------------------------------------------------------------//
@@ -132,53 +116,3 @@ function thaGame_R_P_S_() {
     }
     console.log(thaGame_R_P_S_(play));
 
-
-
-
-
-
-
-
-//   WHAT IFS BELOW
-//
-// What if...
-
-    // function playRound(playerSelection, computerSelection) {
-       
-    //     if ((playerPlay() === computerPlay()) === true) {                                           // WHY ISN'T THE COMPUTER COMPARING THE TWO PROPERTIES? - NEED TO CHANGE FROM === TO 
-    //         return ("It's a tie! " +playerPlay()+ " is equal to " +computerPlay());
-
-    //     }   
-        
-        //  let computerSelection = computerPlay();                   // removed from function
-        //  let playerSelection = playerPlay();                       // ^^^
-
-
-    // }
-
-    // // console.log(playerPlay()+computerPlay());
-
-
-
-
-
-
-
-
-
-
-// console.log(playerPlay()+computerPlay());
-
-//
-    // function playRound(playerSelection, computerSelection) {
-       
-    //     if ((playerPlay() === computerPlay()) === true) {                                           // WHY ISN'T THE COMPUTER COMPARING THE TWO PROPERTIES? - NEED TO CHANGE FROM === TO 
-    //         return ("It's a tie! " +playerPlay()+ " is equal to " +computerPlay());
-
-    //     }   
-        
-    //     // let computerSelection = computerPlay();                   // removed from function
-    //     // let playerSelection = playerPlay();                       // ^^^
-
-
-    // }
